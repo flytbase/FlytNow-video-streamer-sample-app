@@ -1,0 +1,8 @@
+<!-- Basic navigation bar -->
+<app-nav-bar></app-nav-bar>
+<!-- Multiple video stream view -->
+<ng-container *ngFor="let videoStreamDetail of this.State.videoStreamDetails">
+  <app-video-stream [videoStreamDetail]="videoStreamDetail"></app-video-stream>
+</ng-container>
+<!-- Modal to add new stream -->
+<app-add-stream-modal *ngIf="this.State.showAddStreamModal"></app-add-stream-modal>

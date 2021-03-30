@@ -1,0 +1,19 @@
+<div class="back-drop" (click)="this.State.showAddStreamModal=false"></div>
+
+<div class="add-streammodal-container">
+  <h1>Add FlytNow Video Feed</h1><br>
+  <form [formGroup]="this.addStreamForm" (submit)="addVideoStream()">
+    <input type="password" formControlName="api_key" placeholder="API-KEY" required>
+    <input type="text" formControlName="vehicle_id" placeholder="Vehicle-ID" required>
+    <input type="number" formControlName="source_id" placeholder="Source-ID" required>
+    <!-- Button to add new stream -->
+    <button type="submit" class="add-stream add-streammodal-submit"
+      [ngClass]="{'disabled-btn':this.addStreamForm.invalid}">Add</button>
+  </form>
+
+  <div class="add-stream-help">
+    <a href="https://flytbase.com/">© FlytBase, Inc. - All Rights Reserved. | WhatsApp: <a
+        href="https://wa.me/15513586065?text=Hello!%20I%20would%20like%20to%20set%20up%20a%20call%20with%20you">+1(551)
+        358-6065</a></a>
+  </div>
+</div>

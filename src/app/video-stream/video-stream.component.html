@@ -1,0 +1,25 @@
+<!-- video stream viewer -->
+<div class="feed-container">
+  <!-- Define an element_id and pass it to the VideoSteamer class -->
+  <div [id]="element_id">
+    {{failedFeed?'Something Went Wrong...':'Loading...'}}
+  </div>
+</div>
+<div class="footer">
+  <div class="recording-container">
+    <div class="recording-indicator"
+      [ngStyle]="{'background-color':this.archivingActive?'red':this.failedFeed?'yellow':'black'}">
+    </div>
+  </div>
+  <div class="msg-container" style="white-space: pre;">
+    {{msg}}
+  </div>
+  <!-- Unlocks when VideoStreamer constructor resolves successfully -->
+  <div class="btn-container" *ngIf="this.videoFeed && !this.failedFeed">
+    <button (click)="getSnapShot()"> Take RAW Snapshot</button>
+    <button (click)="getStats()"> Statistics</button>
+    <button (click)="startRecording()"> Start Archiving</button>
+    <button (click)="stopRecording()"> Stop Archiving</button>
+    <button (click)="capture()"> Capture and Archive</button>
+  </div>
+</div>
