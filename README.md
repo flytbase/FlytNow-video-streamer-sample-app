@@ -4,26 +4,15 @@
 <tr>
 <td>
 
-**Please refer to the API doc for NPM package for help.**
+**Please refer to the API doc of NPM package for help.**
 
-- [**API Doc**](https://docs.google.com/document/d/1XyDR_mP6AhyN3kItxknnHeGIZqfKVNhfJ5_FLbInzt4/edit?usp=sharing)
+- [**API Doc**](https://drive.google.com/file/d/1A_NxLjrD2m5AWnTqxVW-duI8ZXYohN7X/view?usp=sharing)
 
 </td>
 </tr>
 </table>
 
-<!-- # [Live Demo](#live-demo)
-Here is a working live demo :  -->
-
-<!-- <p align="center">
-  <p align="center">
-    <a href="">
-      <img src="" alt="Demo example"/>
-    </a>
-  </p>
-</p> -->
-
-# [Quick start](#quick-start)
+# [Quick start Angular](#quick-start)
 
 ```bash
 
@@ -31,7 +20,7 @@ Here is a working live demo :  -->
 git clone https://github.com/flytbase/FlytNow-video-streamer-sample-app.git
 
 # change directory
-cd FlytNow-video-streamer-sample-app
+cd FlytNow-video-streamer-sample-app/angular
 
 # install the repo with npm
 npm install
@@ -41,39 +30,22 @@ npm start
 
 ```
 
-in your browser go to [http://localhost:4200](http://localhost:4200)
+To view the sample app, launch your browser and open URL [http://localhost:4200](http://localhost:4200)
 
-<!-- # [Tutorial](#quick-start)
+# [Quick start React](#quick-start)
 
-Here is a step by step Tutorial :  https://www.ganatan.com/tutorials/getting-started-with-angular
+```bash
 
-<p align="center">
-  <a href="https://www.ganatan.com/tutorials/getting-started-with-angular">
-    <img src="img/angular-example-starter-github.png" alt="Demo example"/>
-  </a>
-</p> -->
+# download the example or clone the repo from github
+git clone https://github.com/flytbase/FlytNow-video-streamer-sample-app.git
 
-<!-- # [Getting started](#getting-started)
+# change directory
+cd FlytNow-video-streamer-sample-app/react
 
+# start the server
+npm start
 
-## Installation
- `npm install` (installing dependencies)
+```
 
-## Development
- `npm run start`
- in your browser go to [http://localhost:4200](http://localhost:4200)
+To view the sample app, launch your browser and open URL [http://localhost:4200](http://localhost:4200)
 
-## Production
- `npm run build`
-
-## Tests
- `npm run lint`
- `npm run test`
- `npm run e2e`
-
-# [Author](#author)
- Author  : FlytBase
-
-## [English Tutorials](#english-tutorials)
-- Installation -
-- Tutorials Step by Step -  -->
