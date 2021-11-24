@@ -22,6 +22,11 @@ class App extends React.Component {
       source_id,
       element_id
     );
+
+    if (videoFeed == null) {
+      return;
+    }
+
     // Checking for connection failure
     if (videoFeed['status'] === false) {
       console.log(

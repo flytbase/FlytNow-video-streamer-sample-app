@@ -42,6 +42,10 @@ git clone https://github.com/flytbase/FlytNow-video-streamer-sample-app.git
 # change directory
 cd FlytNow-video-streamer-sample-app/react
 
+# Update the API key and VID
+
+Open file: src/App.js, and update the variables `api_key` and `vehicle_id` in the function `componentDidMount()`.
+
 # start the server
 npm start
 

@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Update Config
+
+Open file: `src/App.js`, and update the variables `api_key` and `vehicle_id` in the function `componentDidMount()`.
+
 ## Available Scripts
 
 In the project directory, you can run:
