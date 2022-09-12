@@ -979,7 +979,7 @@ var routes = {
 
 var environment = {
   development: false,
-  cloudUrl: 'http://localhost:1234'
+  cloudUrl: 'https://api-stag.flytnow.com'
 };
 
 var API_METHODS = /*#__PURE__*/Object.freeze({
