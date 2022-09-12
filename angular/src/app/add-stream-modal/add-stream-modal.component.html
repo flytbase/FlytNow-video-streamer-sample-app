@@ -5,6 +5,7 @@
   <form [formGroup]="this.addStreamForm" (submit)="addVideoStream()">
     <input type="password" formControlName="api_key" placeholder="API-KEY" required>
     <input type="text" formControlName="vehicle_id" placeholder="Vehicle-ID" required>
+    <input type="text" formControlName="token" placeholder="Personal-Access-Token" required>
     <input type="number" formControlName="source_id" placeholder="Source-ID" required>
     <!-- Button to add new stream -->
     <button type="submit" class="add-stream add-streammodal-submit"

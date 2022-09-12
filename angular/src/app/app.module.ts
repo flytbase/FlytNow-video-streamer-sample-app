@@ -6,20 +6,17 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { VideoStreamComponent } from './video-stream/video-stream.component';
 import { AddStreamModalComponent } from './add-stream-modal/add-stream-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     VideoStreamComponent,
-    AddStreamModalComponent
+    AddStreamModalComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, CommonModule],
+  providers: [CommonModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
