@@ -1,5 +1,9 @@
 import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
-import { getStreamer, changeStream } from '@flytnow/video-client-staging';
+import {
+  getStreamer,
+  changeStream,
+  REQUEST_TYPE_ENUM,
+} from '@flytnow/video-client-staging';
 import { MillicastStreamer } from '@flytnow/video-client-staging/dist/classes/MillicastClient.class';
 import { OpentokStreamer } from '@flytnow/video-client-staging/dist/classes/OpentokClient.class';
 @Component({
@@ -14,6 +18,7 @@ export class VideoStreamComponent implements AfterViewInit {
   failedFeed: boolean;
   archivingActive: boolean;
   msg: String;
+  requestType = REQUEST_TYPE_ENUM;
   @ViewChild('video_element') htmlELement;
   feedType: string = '';
   constructor() {}
@@ -32,7 +37,6 @@ export class VideoStreamComponent implements AfterViewInit {
 
   async init() {
     try {
-      console.log(this.htmlELement);
       this.videoFeed = await getStreamer(
         this.videoStreamDetail.api_key,
         this.videoStreamDetail.vehicle_id,
@@ -45,28 +49,6 @@ export class VideoStreamComponent implements AfterViewInit {
     } catch (err) {
       this.msg =
         'Error while initializing video feed, check console for more info';
-    }
-  }
-
-  async initFeed() {
-    // Instantiating VideoStreamer Object
-    // which will expose all the API methods once connection is established
-    let element = document.getElementById(this.element_id);
-    console.log(element, this.element_id);
-    if (this.videoFeed['status'] === false) {
-      console.log('Something went wrong.');
-      this.msg = ` Failed
-      ErrorCode: ${this.videoFeed['code']}
-      Message:${this.videoFeed['message']}`;
-      this.failedFeed = true;
-    } else {
-      //Connection Successful
-      console.log(
-        'Feed Active for ',
-        this.videoStreamDetail.vehicle_id,
-        ' with source-id ',
-        this.videoStreamDetail.source_id
-      );
     }
   }
 
@@ -120,17 +102,6 @@ export class VideoStreamComponent implements AfterViewInit {
     }
   }
   async getStats() {
-    // Method to get stats of the connection
-    // if (this.videoFeed) {
-    //   let response = await this.videoFeed.getStats();
-    //   if (response) {
-    //     this.msg = 'Statistics Logged to Console.';
-    //     console.log('Statistics->', response);
-    //   } else {
-    //     this.msg = "Couldn't find Feed Statistics.";
-    //   }
-    // }
-
     this.videoFeed.getStats().subscribe((stats) => {
       console.log(stats);
     });
@@ -153,7 +124,7 @@ export class VideoStreamComponent implements AfterViewInit {
     }
   }
 
-  toggleStream() {
+  toggleStream(): number {
     if (this.videoFeed) {
       return this.videoFeed.streamType() == 'opentok' ? 1 : 0;
     } else {
@@ -169,6 +140,7 @@ export class VideoStreamComponent implements AfterViewInit {
       this.videoStreamDetail.token,
       this.videoStreamDetail.source_id,
       this.htmlELement.nativeElement,
+      'flytos',
       this.toggleStream()
     );
     this.feedType = this.videoFeed.streamType();
