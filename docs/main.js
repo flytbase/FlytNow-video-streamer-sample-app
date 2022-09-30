@@ -51,11 +51,14 @@ class AddStreamModalComponent {
     ngOnInit() {
         //form
         this.addStreamForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            api_key: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('NWU0MDAwMmU5NTA2YTcxM2ExMGRkMjUzNDA4M2Y2NGY0MDNmNDkwYmQ1OWRkMWNhMWFlYTQ4ZDk=', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
-            vehicle_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('wVQv1qs6', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
-            token: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('6e9560880e87b7ff1d633c852ac6d5a31881505f', [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
-            ]),
+            // api_key: new FormControl(
+            //   'NWU0MDAwMmU5NTA2YTcxM2ExMGRkMjUzNDA4M2Y2NGY0MDNmNDkwYmQ1OWRkMWNhMWFlYTQ4ZDk=',
+            //   [Validators.required]
+            // ),
+            // vehicle_id: new FormControl('wVQv1qs6', [Validators.required]),
+            // token: new FormControl('6e9560880e87b7ff1d633c852ac6d5a31881505f', [
+            //   Validators.required,
+            // ]),
             // api_key: new FormControl(
             //   'NjE1YzY2NmE5ZjE5MTgyNDhlMmMwM2NiNGM4YTY5OWNhYTA5MGZiMzkxYjRjZTMwMDExMmY3ZTA=',
             //   [Validators.required]
@@ -65,9 +68,9 @@ class AddStreamModalComponent {
             // token: new FormControl('bb84c840eaff94e84e11255d23aedfbeafd57aa1', [
             //   Validators.required,
             // ]),
-            // api_key: new FormControl('', [Validators.required]),
-            // vehicle_id: new FormControl('', [Validators.required]),
-            // token: new FormControl('', [Validators.required]),
+            api_key: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
+            vehicle_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
+            token: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
             source_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](0, [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
         });
     }
