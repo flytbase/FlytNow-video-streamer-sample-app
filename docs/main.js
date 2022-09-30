@@ -51,14 +51,11 @@ class AddStreamModalComponent {
     ngOnInit() {
         //form
         this.addStreamForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            // api_key: new FormControl(
-            //   'NWU0MDAwMmU5NTA2YTcxM2ExMGRkMjUzNDA4M2Y2NGY0MDNmNDkwYmQ1OWRkMWNhMWFlYTQ4ZDk=',
-            //   [Validators.required]
-            // ),
-            // vehicle_id: new FormControl('wVQv1qs6', [Validators.required]),
-            // token: new FormControl('6e9560880e87b7ff1d633c852ac6d5a31881505f', [
-            //   Validators.required,
-            // ]),
+            api_key: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('NWU0MDAwMmU5NTA2YTcxM2ExMGRkMjUzNDA4M2Y2NGY0MDNmNDkwYmQ1OWRkMWNhMWFlYTQ4ZDk=', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
+            vehicle_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('wVQv1qs6', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
+            token: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('6e9560880e87b7ff1d633c852ac6d5a31881505f', [
+                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+            ]),
             // api_key: new FormControl(
             //   'NjE1YzY2NmE5ZjE5MTgyNDhlMmMwM2NiNGM4YTY5OWNhYTA5MGZiMzkxYjRjZTMwMDExMmY3ZTA=',
             //   [Validators.required]
@@ -68,9 +65,9 @@ class AddStreamModalComponent {
             // token: new FormControl('bb84c840eaff94e84e11255d23aedfbeafd57aa1', [
             //   Validators.required,
             // ]),
-            api_key: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
-            vehicle_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
-            token: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
+            // api_key: new FormControl('', [Validators.required]),
+            // vehicle_id: new FormControl('', [Validators.required]),
+            // token: new FormControl('', [Validators.required]),
             source_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](0, [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
         });
     }
@@ -141,8 +138,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./state.service */ "./src/app/state.service.ts");
 /* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "./src/app/nav-bar/nav-bar.component.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./video-stream/video-stream.component */ "./src/app/video-stream/video-stream.component.ts");
-/* harmony import */ var _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./add-stream-modal/add-stream-modal.component */ "./src/app/add-stream-modal/add-stream-modal.component.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/__ivy_ngcc__/fesm2015/ngx-spinner.js");
+/* harmony import */ var _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./video-stream/video-stream.component */ "./src/app/video-stream/video-stream.component.ts");
+/* harmony import */ var _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./add-stream-modal/add-stream-modal.component */ "./src/app/add-stream-modal/add-stream-modal.component.ts");
+
 
 
 
@@ -152,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function AppComponent_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-video-stream", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-video-stream", 3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
     const videoStreamDetail_r2 = ctx.$implicit;
@@ -168,16 +167,17 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_state_service__WEBPACK_IMPORTED_MODULE_1__["StateService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 3, vars: 2, consts: [[4, "ngFor", "ngForOf"], [4, "ngIf"], [3, "videoStreamDetail"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 4, vars: 2, consts: [[4, "ngFor", "ngForOf"], [4, "ngIf"], ["type", "timer"], [3, "videoStreamDetail"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-nav-bar");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AppComponent_ng_container_1_Template, 2, 1, "ng-container", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, AppComponent_app_add_stream_modal_2_Template, 1, 0, "app-add-stream-modal", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "ngx-spinner", 2);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.State.videoStreamDetails);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.State.showAddStreamModal);
-    } }, directives: [_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_2__["NavBarComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_4__["VideoStreamComponent"], _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__["AddStreamModalComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
+    } }, directives: [_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_2__["NavBarComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], ngx_spinner__WEBPACK_IMPORTED_MODULE_4__["NgxSpinnerComponent"], _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_5__["VideoStreamComponent"], _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_6__["AddStreamModalComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -208,6 +208,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./add-stream-modal/add-stream-modal.component */ "./src/app/add-stream-modal/add-stream-modal.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/__ivy_ngcc__/fesm2015/ngx-spinner.js");
+
 
 
 
@@ -220,11 +222,21 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]], imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]], imports: [[
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"],
+        ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__["NavBarComponent"],
         _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_4__["VideoStreamComponent"],
-        _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__["AddStreamModalComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]] }); })();
+        _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__["AddStreamModalComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
+        _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"],
+        ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -234,7 +246,13 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _video_stream_video_stream_component__WEBPACK_IMPORTED_MODULE_4__["VideoStreamComponent"],
                     _add_stream_modal_add_stream_modal_component__WEBPACK_IMPORTED_MODULE_5__["AddStreamModalComponent"],
                 ],
-                imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]],
+                imports: [
+                    _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
+                    _angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"],
+                    ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"],
+                ],
                 providers: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["CommonModule"]],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]],
             }]
@@ -354,53 +372,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @flytnow/video-client-staging */ "./node_modules/@flytnow/video-client-staging/dist/index.js");
 /* harmony import */ var _flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/__ivy_ngcc__/fesm2015/ngx-spinner.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
 
 
 
 
 
 const _c0 = ["video_element"];
-function VideoStreamComponent_div_9_Template(rf, ctx) { if (rf & 1) {
+function VideoStreamComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r2.getSnapShot(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r2.getSnapShot(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Take RAW Snapshot");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r4.getStats(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r4.getStats(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "Statistics");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_5_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.startRecording(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_5_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r5.startRecording(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Start Archiving");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r6.stopRecording(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r6.stopRecording(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Stop Archiving");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r7.capture(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r7.capture(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Capture and Archive");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_11_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r8.refresh(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "refresh");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_11_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r8.refresh(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "Refresh");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_13_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r9.disconnect(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_13_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r9.disconnect(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "Disconnect");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "button", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_9_Template_button_click_15_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r10.changeStream(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "change stream");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VideoStreamComponent_div_11_Template_button_click_15_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3); const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r10.changeStream(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "Change stream");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 const _c1 = function (a0) { return { "background-color": a0 }; };
 class VideoStreamComponent {
-    constructor() {
+    constructor(_spinner) {
+        this._spinner = _spinner;
         this.requestType = _flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__["REQUEST_TYPE_ENUM"];
         this.feedType = '';
     }
@@ -418,10 +439,13 @@ class VideoStreamComponent {
     init() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
+                this._spinner.show();
                 this.videoFeed = yield Object(_flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__["getStreamer"])(this.videoStreamDetail.api_key, this.videoStreamDetail.vehicle_id, this.videoStreamDetail.token, this.videoStreamDetail.source_id, this.htmlELement.nativeElement, 0);
                 this.feedType = this.videoFeed.streamType();
+                this._spinner.hide();
             }
             catch (err) {
+                this._spinner.hide();
                 this.msg =
                     'Error while initializing video feed, check console for more info';
             }
@@ -517,19 +541,27 @@ class VideoStreamComponent {
     }
     changeStream() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            yield this.disconnect();
-            this.videoFeed = yield Object(_flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__["changeStream"])(this.videoStreamDetail.api_key, this.videoStreamDetail.vehicle_id, this.videoStreamDetail.token, this.videoStreamDetail.source_id, this.htmlELement.nativeElement, 'flytos', this.toggleStream());
-            this.feedType = this.videoFeed.streamType();
+            try {
+                this._spinner.show();
+                yield this.disconnect();
+                this.videoFeed = yield Object(_flytnow_video_client_staging__WEBPACK_IMPORTED_MODULE_2__["changeStream"])(this.videoStreamDetail.api_key, this.videoStreamDetail.vehicle_id, this.videoStreamDetail.token, this.videoStreamDetail.source_id, this.htmlELement.nativeElement, 'flytos', this.toggleStream());
+                this._spinner.hide();
+                this.feedType = this.videoFeed.streamType();
+            }
+            catch (err) {
+                this.msg = err;
+                this._spinner.hide();
+            }
         });
     }
 }
-VideoStreamComponent.ɵfac = function VideoStreamComponent_Factory(t) { return new (t || VideoStreamComponent)(); };
+VideoStreamComponent.ɵfac = function VideoStreamComponent_Factory(t) { return new (t || VideoStreamComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"])); };
 VideoStreamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: VideoStreamComponent, selectors: [["app-video-stream"]], viewQuery: function VideoStreamComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.htmlELement = _t.first);
-    } }, inputs: { videoStreamDetail: "videoStreamDetail" }, decls: 10, vars: 7, consts: [[1, "feed-container"], ["video_element", ""], [1, "footer"], [1, "recording-container"], [1, "recording-indicator", 3, "ngStyle"], [1, "msg-container", 2, "white-space", "pre"], ["class", "btn-container", 4, "ngIf"], [1, "btn-container"], [3, "click"]], template: function VideoStreamComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { videoStreamDetail: "videoStreamDetail" }, decls: 12, vars: 8, consts: [[1, "feed-container"], ["video_element", ""], [1, "footer"], [1, "recording-container"], [1, "recording-indicator", 3, "ngStyle"], [1, "msg-container", 2, "white-space", "pre"], ["class", "btn-container", 4, "ngIf"], [1, "btn-container"], [3, "click"]], template: function VideoStreamComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", null, 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3);
@@ -541,19 +573,23 @@ VideoStreamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](9, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, VideoStreamComponent_div_9_Template, 17, 0, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, VideoStreamComponent_div_11_Template, 17, 0, "div", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.failedFeed ? "Something Went Wrong..." : "Loading...", " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](5, _c1, ctx.archivingActive ? "red" : ctx.failedFeed ? "yellow" : "black"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](6, _c1, ctx.archivingActive ? "red" : ctx.failedFeed ? "yellow" : "black"));
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate2"](" ", "Feed Type: " + ctx.feedType, "", ctx.msg, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", "Feed Type: " + ctx.feedType, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate2"](" ", "Message:", " ", ctx.msg ? ctx.msg : "", " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.videoFeed && !ctx.failedFeed);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: ["@import url(\"https://fonts.googleapis.com/css2?family=Nunito&display=swap\");\n\n*[_ngcontent-%COMP%] {\n  font-family: \"Nunito\", sans-serif;\n}\n\n.feed-container[_ngcontent-%COMP%] {\n  width: calc(100% - 2px);\n  height: 50vh;\n  background-color: #363636;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: 1px solid seashell;\n  border-bottom: 0px;\n}\n\n.feed-container[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  text-align: center;\n  color: aliceblue;\n  height: 100%;\n  width: 100%;\n}\n\n.footer[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  background-color: #212329;\n  height: 70px;\n  align-items: center;\n  border: 1px solid seashell;\n  border-top: 0px;\n}\n\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background-color: #f9423d;\n  padding: 6px 15px;\n  border-radius: 4px;\n  cursor: pointer;\n  color: aliceblue;\n  margin-left: 10px;\n}\n\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover {\n  background-color: transparent;\n  color: #fff;\n  padding: 6px 16px;\n  border-radius: 4px;\n  border: 1px solid #f9423d;\n  transition: all 0.3s ease-out;\n}\n\n.footer[_ngcontent-%COMP%]   .btn-container[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n\n.msg-container[_ngcontent-%COMP%] {\n  color: #fff;\n  overflow-y: scroll;\n  height: 100%;\n  padding: 5px;\n  flex-grow: 1;\n}\n\n.recording-container[_ngcontent-%COMP%] {\n  width: 70px;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.recording-indicator[_ngcontent-%COMP%] {\n  width: 25px;\n  height: 25px;\n  border-radius: 20px;\n  background-color: #000;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW8tc3RyZWFtL3ZpZGVvLXN0cmVhbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDJFQUEyRTs7QUFFM0U7RUFDRSxpQ0FBaUM7QUFDbkM7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLHlCQUF5QjtFQUN6QixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QiwwQkFBMEI7RUFDMUIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsMEJBQTBCO0VBQzFCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLDZCQUE2QjtFQUM3QixXQUFXO0VBQ1gsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsc0JBQXNCO0FBQ3hCIiwiZmlsZSI6InNyYy9hcHAvdmlkZW8tc3RyZWFtL3ZpZGVvLXN0cmVhbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU51bml0byZkaXNwbGF5PXN3YXBcIik7XG5cbioge1xuICBmb250LWZhbWlseTogXCJOdW5pdG9cIiwgc2Fucy1zZXJpZjtcbn1cblxuLmZlZWQtY29udGFpbmVyIHtcbiAgd2lkdGg6IGNhbGMoMTAwJSAtIDJweCk7XG4gIGhlaWdodDogNTB2aDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzM2MzYzNjtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHNlYXNoZWxsO1xuICBib3JkZXItYm90dG9tOiAwcHg7XG59XG5cbi5mZWVkLWNvbnRhaW5lciBkaXYge1xuICBmb250LXNpemU6IDJyZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IGFsaWNlYmx1ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmZvb3RlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjMyOTtcbiAgaGVpZ2h0OiA3MHB4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCBzZWFzaGVsbDtcbiAgYm9yZGVyLXRvcDogMHB4O1xufVxuXG4uZm9vdGVyIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmOTQyM2Q7XG4gIHBhZGRpbmc6IDZweCAxNXB4O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgY29sb3I6IGFsaWNlYmx1ZTtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG5cbi5mb290ZXIgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGNvbG9yOiAjZmZmO1xuICBwYWRkaW5nOiA2cHggMTZweDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZjk0MjNkO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlLW91dDtcbn1cblxuLmZvb3RlciAuYnRuLWNvbnRhaW5lciB7XG4gIGZsZXgtc2hyaW5rOiAwO1xufVxuXG4ubXNnLWNvbnRhaW5lciB7XG4gIGNvbG9yOiAjZmZmO1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG4gIGhlaWdodDogMTAwJTtcbiAgcGFkZGluZzogNXB4O1xuICBmbGV4LWdyb3c6IDE7XG59XG5cbi5yZWNvcmRpbmctY29udGFpbmVyIHtcbiAgd2lkdGg6IDcwcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5yZWNvcmRpbmctaW5kaWNhdG9yIHtcbiAgd2lkdGg6IDI1cHg7XG4gIGhlaWdodDogMjVweDtcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDtcbn1cbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"]], styles: ["@import url(\"https://fonts.googleapis.com/css2?family=Nunito&display=swap\");\n\n*[_ngcontent-%COMP%] {\n  font-family: \"Nunito\", sans-serif;\n}\n\n.feed-container[_ngcontent-%COMP%] {\n  width: calc(100% - 2px);\n  height: 50vh;\n  background-color: #363636;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: 1px solid seashell;\n  border-bottom: 0px;\n}\n\n.feed-container[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  text-align: center;\n  color: aliceblue;\n  height: 100%;\n  width: 100%;\n}\n\n.footer[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  background-color: #212329;\n  height: 80px;\n  align-items: center;\n  border: 1px solid seashell;\n  border-top: 0px;\n}\n\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  background-color: #f9423d;\n  padding: 6px 15px;\n  border-radius: 4px;\n  cursor: pointer;\n  color: aliceblue;\n  margin-left: 10px;\n}\n\n.footer[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover {\n  background-color: transparent;\n  color: #fff;\n  padding: 6px 16px;\n  border-radius: 4px;\n  border: 1px solid #f9423d;\n  transition: all 0.3s ease-out;\n}\n\n.footer[_ngcontent-%COMP%]   .btn-container[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n  width: 50%;\n}\n\n.msg-container[_ngcontent-%COMP%] {\n  color: #fff;\n  overflow-y: scroll;\n  height: 100%;\n  padding: 5px;\n  flex-grow: 1;\n}\n\n.recording-container[_ngcontent-%COMP%] {\n  width: 70px;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.recording-indicator[_ngcontent-%COMP%] {\n  width: 25px;\n  height: 25px;\n  border-radius: 20px;\n  background-color: #000;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW8tc3RyZWFtL3ZpZGVvLXN0cmVhbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDJFQUEyRTs7QUFFM0U7RUFDRSxpQ0FBaUM7QUFDbkM7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLHlCQUF5QjtFQUN6QixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2QiwwQkFBMEI7RUFDMUIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsMEJBQTBCO0VBQzFCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLDZCQUE2QjtFQUM3QixXQUFXO0VBQ1gsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsNkJBQTZCO0FBQy9COztBQUVBO0VBQ0UsY0FBYztFQUNkLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsc0JBQXNCO0FBQ3hCIiwiZmlsZSI6InNyYy9hcHAvdmlkZW8tc3RyZWFtL3ZpZGVvLXN0cmVhbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU51bml0byZkaXNwbGF5PXN3YXBcIik7XG5cbioge1xuICBmb250LWZhbWlseTogXCJOdW5pdG9cIiwgc2Fucy1zZXJpZjtcbn1cblxuLmZlZWQtY29udGFpbmVyIHtcbiAgd2lkdGg6IGNhbGMoMTAwJSAtIDJweCk7XG4gIGhlaWdodDogNTB2aDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzM2MzYzNjtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHNlYXNoZWxsO1xuICBib3JkZXItYm90dG9tOiAwcHg7XG59XG5cbi5mZWVkLWNvbnRhaW5lciBkaXYge1xuICBmb250LXNpemU6IDJyZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IGFsaWNlYmx1ZTtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmZvb3RlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjMyOTtcbiAgaGVpZ2h0OiA4MHB4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCBzZWFzaGVsbDtcbiAgYm9yZGVyLXRvcDogMHB4O1xufVxuXG4uZm9vdGVyIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmOTQyM2Q7XG4gIHBhZGRpbmc6IDZweCAxNXB4O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgY29sb3I6IGFsaWNlYmx1ZTtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG5cbi5mb290ZXIgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGNvbG9yOiAjZmZmO1xuICBwYWRkaW5nOiA2cHggMTZweDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZjk0MjNkO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlLW91dDtcbn1cblxuLmZvb3RlciAuYnRuLWNvbnRhaW5lciB7XG4gIGZsZXgtc2hyaW5rOiAwO1xuICB3aWR0aDogNTAlO1xufVxuXG4ubXNnLWNvbnRhaW5lciB7XG4gIGNvbG9yOiAjZmZmO1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG4gIGhlaWdodDogMTAwJTtcbiAgcGFkZGluZzogNXB4O1xuICBmbGV4LWdyb3c6IDE7XG59XG5cbi5yZWNvcmRpbmctY29udGFpbmVyIHtcbiAgd2lkdGg6IDcwcHg7XG4gIGhlaWdodDogMTAwJTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi5yZWNvcmRpbmctaW5kaWNhdG9yIHtcbiAgd2lkdGg6IDI1cHg7XG4gIGhlaWdodDogMjVweDtcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDtcbn1cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](VideoStreamComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -561,7 +597,7 @@ VideoStreamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdef
                 templateUrl: './video-stream.component.html',
                 styleUrls: ['./video-stream.component.css'],
             }]
-    }], function () { return []; }, { videoStreamDetail: [{
+    }], function () { return [{ type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] }]; }, { videoStreamDetail: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
         }], htmlELement: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],

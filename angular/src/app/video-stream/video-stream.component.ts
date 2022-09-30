@@ -6,6 +6,7 @@ import {
 } from '@flytnow/video-client-staging';
 import { MillicastStreamer } from '@flytnow/video-client-staging/dist/classes/MillicastClient.class';
 import { OpentokStreamer } from '@flytnow/video-client-staging/dist/classes/OpentokClient.class';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-video-stream',
   templateUrl: './video-stream.component.html',
@@ -21,7 +22,7 @@ export class VideoStreamComponent implements AfterViewInit {
   requestType = REQUEST_TYPE_ENUM;
   @ViewChild('video_element') htmlELement;
   feedType: string = '';
-  constructor() {}
+  constructor(private _spinner: NgxSpinnerService) {}
 
   ngAfterViewInit(): void {
     // Drafting an element_id
@@ -37,6 +38,7 @@ export class VideoStreamComponent implements AfterViewInit {
 
   async init() {
     try {
+      this._spinner.show();
       this.videoFeed = await getStreamer(
         this.videoStreamDetail.api_key,
         this.videoStreamDetail.vehicle_id,
@@ -46,7 +48,9 @@ export class VideoStreamComponent implements AfterViewInit {
         0
       );
       this.feedType = this.videoFeed.streamType();
+      this._spinner.hide();
     } catch (err) {
+      this._spinner.hide();
       this.msg =
         'Error while initializing video feed, check console for more info';
     }
@@ -133,16 +137,23 @@ export class VideoStreamComponent implements AfterViewInit {
   }
 
   async changeStream() {
-    await this.disconnect();
-    this.videoFeed = await changeStream(
-      this.videoStreamDetail.api_key,
-      this.videoStreamDetail.vehicle_id,
-      this.videoStreamDetail.token,
-      this.videoStreamDetail.source_id,
-      this.htmlELement.nativeElement,
-      'flytos',
-      this.toggleStream()
-    );
-    this.feedType = this.videoFeed.streamType();
+    try {
+      this._spinner.show();
+      await this.disconnect();
+      this.videoFeed = await changeStream(
+        this.videoStreamDetail.api_key,
+        this.videoStreamDetail.vehicle_id,
+        this.videoStreamDetail.token,
+        this.videoStreamDetail.source_id,
+        this.htmlELement.nativeElement,
+        'flytos',
+        this.toggleStream()
+      );
+      this._spinner.hide();
+      this.feedType = this.videoFeed.streamType();
+    } catch (err) {
+      this.msg = err;
+      this._spinner.hide();
+    }
   }
 }
