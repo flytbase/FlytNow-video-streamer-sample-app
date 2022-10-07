@@ -6,20 +6,24 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { VideoStreamComponent } from './video-stream/video-stream.component';
 import { AddStreamModalComponent } from './add-stream-modal/add-stream-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     VideoStreamComponent,
-    AddStreamModalComponent
+    AddStreamModalComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    NgxSpinnerModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CommonModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

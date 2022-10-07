@@ -5,4 +5,7 @@
   <app-video-stream [videoStreamDetail]="videoStreamDetail"></app-video-stream>
 </ng-container>
 <!-- Modal to add new stream -->
-<app-add-stream-modal *ngIf="this.State.showAddStreamModal"></app-add-stream-modal>
+<app-add-stream-modal
+  *ngIf="this.State.showAddStreamModal"
+></app-add-stream-modal>
+<ngx-spinner type="timer"></ngx-spinner>
