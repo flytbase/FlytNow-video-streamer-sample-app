@@ -26,7 +26,7 @@
     {{ "Message:" }} {{ msg ? msg : "" }}
   </div>
   <!-- Unlocks when VideoStreamer constructor resolves successfully  NWU0MDAwMmU5NTA2YTcxM2ExMGRkMjUzNDA4M2Y2NGY0MDNmNDkwYmQ1OWRkMWNhMWFlYTQ4ZDk=  RHEwVTm3-->
-  <div class="btn-container" *ngIf="this.videoFeed && !this.failedFeed">
+  <div class="btn-container">
     <button (click)="getSnapShot()">Take RAW Snapshot</button>
     <button (click)="getStats()">Statistics</button>
     <button (click)="startRecording()">Start Archiving</button>
