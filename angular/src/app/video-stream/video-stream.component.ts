@@ -51,6 +51,7 @@ export class VideoStreamComponent implements AfterViewInit {
       this._spinner.hide();
     } catch (err) {
       this._spinner.hide();
+      console.log(err);
       this.msg =
         'Error while initializing video feed, check console for more info';
     }
@@ -152,6 +153,7 @@ export class VideoStreamComponent implements AfterViewInit {
       this._spinner.hide();
       this.feedType = this.videoFeed.streamType();
     } catch (err) {
+      console.log(err);
       this.msg = err;
       this._spinner.hide();
     }
