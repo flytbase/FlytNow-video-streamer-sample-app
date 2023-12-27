@@ -44,6 +44,7 @@ export class VideoStreamComponent implements AfterViewInit {
         this.videoStreamDetail.vehicle_id,
         this.videoStreamDetail.token,
         this.videoStreamDetail.source_id,
+        'flytos',
         this.htmlELement.nativeElement,
         0
       );
